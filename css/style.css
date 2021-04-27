@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-size: 1.2rem;
+}
+
+nav{
+    display: flex;
+    background-color: #7ACC2D;
+    padding: 1rem;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li{
+    padding-left: 2rem;
+    list-style: none;
+
+}
+
+nav li a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+}
+
+
+.main_section{
+    text-align: center;
+    padding: 5rem;
+}
+
+.products{
+    min-height: 32rem;
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: unset;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.products::-webkit-scrollbar {
+    background-color: #e0f5cd;
+    height: 5px;
+    width: 0;
+}
+.products::-webkit-scrollbar-thumb {
+    background-color: #b8f57f;
+    height: 5px;
+    width: 0;
+}
+
+
+.product{
+    width: 25rem;
+    border: 2.5rem solid white;
+    box-shadow: 0px 6px 20px 0px #c6c6c6;
+    margin:2rem;
+    position: relative;
+    scroll-snap-align: center;
+}
+
+.party {
+    width: 100%; 
+    height: 9rem;
+    background-image: url("https://res.cloudinary.com/crisleoco/image/upload/v1619481158/KittiesShop/party_sjidud.png");
+    background-position: center;
+    position: relative;
+    z-index: 2;
+}
+
+.product::before {
+    position: absolute;
+    content: "";
+    width: 2.5rem;
+    height: 3.5rem;
+    background-color: #ddb97f;
+    left: 50%;
+    top: -4rem;
+    transform: translate(-50%);
+}
+
+.img_content{
+    text-align: center;
+    background-color: transparent;
+}
+
+.text_content{
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.text_button {
+    background-color: #7acc2d;
+    display: block;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+}
+
+iframe { 
+    position: absolute;
+    left: 0;
+    height: 40rem;
+    bottom: 0; 
+    min-width: 72rem; 
+    z-index: -1; 
+}
+
+.services {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    flex-wrap: wrap;
+    padding: 4rem 0;
+}
+
+.service {
+    display: flex;
+    width: 15rem;
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.service_img {
+    background-color: #7ACC2D;
+    border-radius: 50%;
+    width: 13rem;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
+.service_text {
+    background-color: #eeeeee;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.service_img img{
+    width: 60%;
+}
+
+.customers {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    flex-wrap: wrap;
+    background-color: #eeeeee;
+    border-radius: 2rem 2rem 0 0;
+}
+.customer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+.customer_img {
+    width: 13rem;
+    height: 13rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.customer_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.customer_text {
+    margin: 2rem 0;
+}
+
+.customer_text h1 {
+    color: white;
+    background-color: #7ACC2D;
+    border-radius: 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.customer_text p {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.5rem;
+    background-color:#7acc2d;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer p {
+    margin: 0 5rem;
+}
+
+
+
+@media (min-width: 450px)
+{
+    .customer{
+        width: 35%;
+    }
+
+    .services {
+        width: 70%;
+    }
+
+}
+
+@media (min-width: 643px)
+{
+    .services {
+        width: 60%;
+    }
+
+}
+
+@media (min-width:700px) {
+    .products{
+        justify-content:center;
+        overflow-x: none;        
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .products::-webkit-scrollbar {
+        height: 0;
+    }
+
+    .services {
+        width: 70%;
+        padding: 4rem;
+    }
+
+    .service {
+        width: 20rem;
+    }
+
+}
+
+
+@media (min-width:900px){
+
+    .services {
+        width: 100%;
+    }
+
+}
